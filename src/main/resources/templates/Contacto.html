@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" >
+<head>
+	<title>Ez English</title>
+	 <link rel="shortcut icon" href="icono.ico" />
+	<link rel="stylesheet" type="text/css" href="css/Landing.css">
+</head>
+<body>
+	<div class="main">
+
+		<img src="img/haven.jpg" alt="" id="video">
+		
+		<div class="overlay"></div>
+		<div class="navbar" >
+			<div class="logo">EZ</div>
+			<ul style="text-align: right; margin-left:50px;">
+				<li><a th:href="@{/}">HOME</a></li>
+				<li><a th:href="@{/contacto}">CONTACTO</a></li>
+				<li><a th:href="@{/iniciar}">INICIAR SESION</a></li>
+			
+
+				
+			</ul>
+		</div>
+		
+		<div class="contenedor">
+			<form action="" class="form">
+				<div class="form-header">
+					<h1 class="form-title">C<span>ontacto</span></h1>
+				</div>
+
+				<label for="nombre" class="form-label">Nombres:</label>
+				<input type="text" id="nombre" class="form-input" placeholder="Escriba su nombre">
+
+				<label for="direccion" class="form-label">Direccion:</label>
+				<input type="text" id="direccion" class="form-input" placeholder="Escriba su direccion">
+
+				<label for="correo" class="form-label">Correo electronico</label>
+				<input type="email" id="correo" class="form-input" placeholder="Escriba su correo">
+
+				<label for="mensaje" class="form-label">Mensaje</label>
+				<textarea type="mensaje" id="correo" class="form-textarea" placeholder="Aqui escriba su mensaje"></textarea>
+
+				<input type="submit" class="btn-submit"	value="Enviar consulta">
+
+			</form>
+		
+		</div>
+		
+	
+		
+		
+		
+	</div>	
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" >
+<head>
+	<title>Login V1</title>
+	 <link rel="shortcut icon" href="icono.ico" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/lg1.css">
+	<link rel="stylesheet" type="text/css" href="css/lg2.css">
+	<link rel="stylesheet" type="text/css" href="css/lg3.css">
+	<link rel="stylesheet" type="text/css" href="css/lg4.css">
+	<link rel="stylesheet" type="text/css" href="css/lg5.css">
+    <link rel="stylesheet" type="text/css" href="css/lg6.css">
+    <link rel="stylesheet" href="css/loginstyle.css">
+<!--===============================================================================================-->
+</head>
+
+<body >
+	
+	<header>
+	<div class="top-head container">
+		<div class="ml-auto text-right right-p">
+			<ul>
+				    <li class="mr-3 editContent" style="outline: none; cursor: inherit;">
+                        <span class="fa fa-clock-o" style="outline: none; cursor: inherit;"></span>
+                    </li>
+				    <li class="editContent" style="outline: none; cursor: inherit;">
+                        <span class="fa fa-envelope-open" style="outline: none; cursor: inherit;"></span> <a href="mailto:info@example.com"></a> 
+                    </li>
+			    </ul>
+		    </div>
+	    </div>
+        <div class="container">
+		
+        </div>
+    </header>       
+
+	<div class="limiter">
+		<div class="container-login100" style="background-color: orange;">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="img/naranjita.gif" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" th:action="@{/login}" method="post">
+					<span class="login100-form-title">
+						Ingresa a tu Cuenta
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="username" id="username" placeholder="Ingrese su Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" style="background-color: #5FBDD6;">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1" th:if="${error != null}" th:text="${error}">
+						
+						</span>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" th:href="@{/new}">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

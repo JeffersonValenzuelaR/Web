@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ez English</title>
+    <link rel="shortcut icon" href="icono.ico" />
+    <link rel="stylesheet" href="/css/util.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Righteous&family=Vampiro+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <!--CDN de los iconos utilizados-->
+    <script src="https://kit.fontawesome.com/c017d01d28.js"></script>   
+</head>
+
+<body class="perro">
+   
+    <div class="menu">
+        <div class="head">
+            <div class="search">
+                
+                    <p class="textitodeinicio">&nbsp;&nbsp;&nbsp;&nbsp;Bienvenido Naranjón</p>
+                 
+            </div>
+            <div class="logo">
+                <ul>
+                    <li><i class="far fa-envelope"></i></li>
+                    <li><i class="far fa-bell"></i></li>
+                </ul>
+                <h2>Ez English</h2>
+                <form th:action="@{/logout}" method="post"> <button><img src="/img/logout.png" alt=" ... "></button>
+                </form>
+            </div>
+        </div>
+        <div class="body">
+            
+            <ul>
+                
+                <li><a th:href="@{/inicio}">Inicio</a></li>
+                <li><a th:href="@{/talks/list}">Charlas</a></li>
+                <li><a th:href="@{/forums/list}">Foros</a></li>
+                <li><a th:href="@{/exercises/list}">Ejercicios</a></li> 
+                <li><a th:href="@{/levels_exercise/list}">Niveles</a></li>
+                <li><a th:href="@{/editoriales/list}">Editoriales</a></li>
+                <li><a th:href="@{/books/list}">Libros</a></li>
+                <li><a th:href="@{/types_exercise/list}">Competencias </a></li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <section class="inicio" style="display: flex; justify-content: space-between; align-items: center;">
+
+        <div style="background-color: #F2F2F2;">
+            <img src="/img/error3.gif" style="padding: 0; margin-top: 70vh; height: 100vh; width: 100vh;" alt="Error">
+        </div>
+        <div >
+            <p style="width: 100vh; margin-top: 60vh; text-align: center;">¡Lo sentimos , no tienes acceso a esta seccion!</p>
+        </div>
+
+            
+    </section>
+
+    
+
+</body>
+
+
+</html>
+
+<!-- class="fas fa-search"
+lass="far fa-envelope"
+class="far fa-bell" -->

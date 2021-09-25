@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" >
+<head>
+	<title>Login V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/lg1.css">
+	<link rel="stylesheet" type="text/css" href="css/lg2.css">
+	<link rel="stylesheet" type="text/css" href="css/lg3.css">
+	<link rel="stylesheet" type="text/css" href="css/lg4.css">
+	<link rel="stylesheet" type="text/css" href="css/lg5.css">
+    <link rel="stylesheet" type="text/css" href="css/lg6.css">
+    <link rel="stylesheet" href="css/loginstyle.css">
+<!--===============================================================================================-->
+</head>
+
+<body >
+	
+	<header>
+	<div class="top-head container">
+		<div class="ml-auto text-right right-p">
+			<ul>
+				    <li class="mr-3 editContent" style="outline: none; cursor: inherit;">
+                        <span class="fa fa-clock-o" style="outline: none; cursor: inherit;"></span>
+                    </li>
+				    <li class="editContent" style="outline: none; cursor: inherit;">
+                        <span class="fa fa-envelope-open" style="outline: none; cursor: inherit;"></span> <a href="mailto:info@example.com"></a> 
+                    </li>
+			    </ul>
+		    </div>
+	    </div>
+        <div class="container">
+		
+        </div>
+    </header>       
+
+	<div class="limiter">
+
+		<div class="container-login100" style="background-color: orange;">
+
+			<div class="wrap-login100" style="height: 85vh;">
+
+				<div class="login100-pic js-tilt"data-tilt style="width: 400px; transform: translateY(-10%);">
+					<img src="img/naranjita.gif" alt="IMG" style=" height: 500px; ">
+				</div>
+
+				<form class="login100-form validate-form" style="transform: translateY(-18%);" th:action="@{/save}" th:object="${users}" method="post">
+                    
+                    <!-- Titulo del registro -->
+
+                    <span class="login100-form-title" style="padding-bottom: 50px; padding-top: 20px; padding-left: 10px;">
+						<strong style="font-size: 50px; text-align: center; padding: 0;">Registrate</strong>
+					</span>
+                    
+                    <!-- Nombre -->
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz" style="margin-bottom: 20px; margin-left: 5px;">
+						<input class="input100" type="text" name="nombre" placeholder="Nombre" th:field="*{username}">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+                        </span>     
+                    </div>
+
+                    <!-- Email -->
+                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz" style="margin-bottom: 20px; margin-left: 5px;">
+						<input class="input100" type="text" name="email" placeholder="Ingrese su Email" th:field="*{email}">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                        
+					</div>
+
+                    <!-- Contraseña -->
+					<div class="wrap-input100 validate-input" data-validate = "Password is required" style="margin-bottom: 20px; margin-left: 5px;">
+						<input class="input100" type="password" name="pass" placeholder="Contraseña" th:field="*{password}">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<!-- Numero de celular -->
+					<div class="wrap-input100 validate-input" data-validate = "Password is required" style="margin-bottom: 20px; margin-left: 5px;">
+						<input class="input100" type="text" name="phone" placeholder="Numero de celular" th:field="*{numphone}">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<!-- Pais -->
+					<div class="wrap-input100 validate-input" data-validate = "Password is required" style="margin-bottom: 20px; margin-left: 5px;">
+						<input class="input100" type="text" name="country" placeholder="Pais" th:field="*{namecountry}">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-flag" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<!-- Ciudad -->
+					<div class="wrap-input100 validate-input" data-validate = "Password is required" style="margin-bottom: 20px; margin-left: 5px;">
+						<input class="input100" type="text" name="city" placeholder="Ciudad" th:field="*{namecity}">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-building" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" style="background-color: #5FBDD6; margin-left: 5px;">
+							Registrar
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

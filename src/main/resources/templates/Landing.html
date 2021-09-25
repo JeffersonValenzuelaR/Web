@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" >
+<head>
+	<title>Ez English</title>
+	 <link rel="shortcut icon" href="icono.ico" />
+	<link rel="stylesheet" type="text/css" href="css/Landing.css">
+</head>
+<body>
+	<div class="main">
+
+		<img src="img/haven.jpg" alt="" id="video">
+		
+		<div class="overlay"></div>
+		<div class="navbar" >
+			<div class="logo">EZ</div>
+			<ul style="text-align: right; margin-left:50px;">
+				<li><a th:href="@{/}">HOME</a></li>
+				<li><a th:href="@{/contacto}">CONTACTO</a></li>
+				<li><a th:href="@{/iniciar}">INICIAR SESION</a></li>
+						
+			</ul>
+		</div>
+		<div class="heading">
+				<h1 class="head">WELCOME TO  <span>EZ ENGLISH</span></h1>
+				<h3 class="sub">Aprende como en ningún otro lugar</h3>	
+				<div class="btns">
+					<a class="btn1" th:href="@{/iniciar}">INICIAR SESION</a>
+				
+				</div>	
+		</div>
+	</div>	
+</body>
+</html>

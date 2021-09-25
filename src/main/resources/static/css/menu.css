@@ -1,0 +1,274 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+    /* colors */
+--letra: #777;
+--primary: #e44d2c;
+--primaryA: rgba(228, 78, 44, 0.2);
+--seconday: rgb(204, 204, 204, 0.3);
+--fz: 13pt;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #F29136;
+    font-family: sans-serif;
+    
+    
+}
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--seconday);
+    transition: all 500ms ease;
+    z-index: 50;
+}
+.head,
+.body{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.head{
+    background: #f8f8f8;
+    border-bottom: 1px solid var(--seconday);
+}
+.search,
+.logo{
+    width: 50%;
+    position: relative;
+}
+.input{
+    width: 50%;
+    height: 40px;
+    margin-left: 5%;
+    background: var(--seconday);
+    border-radius: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+.input input{
+    width: 90%;
+    height: 100%;
+    background: transparent;
+    border-style: none;
+    font-family: sans-serif;
+    color: var(--letra);
+    font-size: var(--fz);
+    padding: 0 15px;
+    box-sizing: border-box;
+    outline: 0;
+}
+.input label{
+    color: var(--letra);
+}
+.input:hover{
+    filter: brightness(75%);
+}
+.logo,
+.logo ul,
+.logo ul li{
+display: flex;
+align-items: center;
+}
+.logo ul{
+    position: absolute;
+    right: 35%;
+}
+.logo ul li{
+    width: 40px;
+    height: 40px;
+    list-style: none;
+    color: var(--letra);
+    font-size: var(--fz);
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 50%;
+}
+.logo ul li:hover{
+    background: var(--seconday);
+}
+.logo img{
+    position: absolute;
+    right: 7%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid orange;
+    border-radius: 50%;
+    top: -10px;
+}
+.logo h2 {
+    position: absolute;
+    right: 15%;
+    font-size: var(--fz);
+    color: var(--letra); 
+}
+
+section,
+.body ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.body ul {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    display: flex;
+}
+.body ul li{
+    width: calc(100% / 5);
+    list-style: none;
+    margin-top: 1.5vh;
+    height: 7vh;
+    border-radius: 50px;
+    transition: all 500ms ease;
+}
+.body ul li::after{
+    position: absolute;
+    content: "";
+    width: 40px;
+    bottom: 0;
+    height: 4px;
+    border-radius: 3px;
+    background: white;
+    transition: all 500ms ease;
+}
+.body ul li a{
+    display: block;
+    color: var(--letra);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 500ms ease;
+}
+.body ul li:hover{
+    background: var(--primary);
+    box-shadow: 0 0 10px 5px var(--primaryA), 0 0 5px 3px var(--primaryA);
+}
+.body ul li:hover::after{
+    bottom: 1.5vh;
+
+}
+.body ul li:hover a{
+    color: white;
+    outline: 0;
+}
+section{
+    height: 100vh;
+    font-size: 20pt;
+    color: var(--letra);
+}
+#home{
+    margin-top:  20vh;
+}
+section:nth-child(odd){
+    color:white;
+    background-image: linear-gradient(135deg , #ffa62e 50%, #e44d2c 100%);
+}
+.inicio {
+    font-family: 'Righteous', cursive;
+    color: white;
+    display: flex;
+    font-size: 10ch;    
+}
+.inicio,
+img{
+    border-top-right-radius: 350px;
+    border-bottom-right-radius: 300px;
+    width: 1580px;
+    height:950px;
+
+}
+
+.hidden{
+    overflow: hidden;
+}
+.centrado{
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textitodeinicio{
+    margin: 0;
+    font-size: 15px;
+    line-height: 2em;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+
+
+.search-box{
+    position: absolute;
+    top: 54.18%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    
+
+}
+.search-box:hover >.search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover >.search-btn{
+    background: #2F3640;
+   
+  
+
+}
+
+
+.search-btn{
+    color:#FFA62E;
+    float: right;
+    width: 20px;
+    height: 21px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 20px;
+    width: 0px;
+    
+}
+
+body.perro {
+    background: #F29136;
+}
+
+
+
+

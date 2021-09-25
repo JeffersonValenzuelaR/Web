@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ez English</title>
+    <link rel="shortcut icon" href="/icono.ico" />
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/css_slider.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/util.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Righteous&family=Vampiro+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <!--CDN de los iconos utilizados-->
+     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/c017d01d28.js"></script>   
+</head>
+
+
+<body>
+
+    
+
+    <div class="menu">
+        <div class="head">
+            <div class="search">
+               <p>&nbsp;&nbsp;&nbsp;&nbsp;Bienvenido Naranjón</p>
+            </div>
+            <div class="logo">
+                <ul>
+                    <li><i class="far fa-envelope"></i></li>
+                    <li><i class="far fa-bell"></i></li>
+                </ul>
+                <h2>Ez English</h2>
+                	<form th:action="@{/logout}" method="post"> <button><img src="/img/logout.png" alt=" ... "></button> </form>
+               
+                
+            </div>
+        </div>
+        <div class="body">
+            
+            <ul>
+                
+                 <li><a th:href="@{/inicio}">Inicio</a></li>
+                <li><a th:href="@{/talks/list}">Charlas</a></li>
+                <li><a th:href="@{/forums/list}">Foros</a></li>
+                <li><a th:href="@{/exercises/list}">Ejercicios</a></li> 
+                <li><a th:href="@{/levels_exercise/list}">Niveles</a></li>
+                <li><a th:href="@{/editoriales/list}">Editoriales</a></li>
+                <li><a th:href="@{/books/list}">Libros</a></li>
+                <li><a th:href="@{/types_exercise/list}">Competencias </a></li>
+                
+            </ul>
+        </div>
+    </div>
+   
+       <aside>
+
+       </aside>
+       
+        <section class="Charlas">
+    
+            <div class="limiter">
+                <div class="container-table100">
+                
+                    <div class="wrap-table100">
+                    
+                        <div style="align-content: left; display:inline-block; 
+                         color: white;font-family: 'Oswald', sans-serif; margin-bottom: 25px;">
+                            <h2 style="font-size: 100px;"><strong>Charlas</strong> </h2>
+                        </div>
+                        <div class="table100" >
+                        
+                       
+                        <div style="align-content: left; justify-content: center; display:inline-block; margin-bottom:10px; text-align:center;
+                        background-color: #408791;border-radius: 10px; color: white;font-family: 'Oswald', sans-serif; width:100px;" >
+                 
+                         <a th:href="@{/talks/new/}" class="btnnew btn " style="color: white;">Nuevo</a>
+                         
+
+                      </div>
+                      
+                      <div style="align-content: left; justify-content: center; display:inline-block; margin-bottom:10px; text-align:center;
+                      background-color: #408791;border-radius: 10px; color: white;font-family: 'Oswald', sans-serif; width:100px;" >
+               
+                     
+                       <a th:href="@{/talks/list}" class="btnnew btn" style="color: white; ">Listar</a>
+                      
+                       
+                    </div>
+                      
+                      <div  style="display:inline-block; "class="form-group">      
+	                  
+	                  
+	                  
+	                  <form th:action="@{/talks/buscar}" method="post" style="display:inline-block;height:50px; transform:translateY(58%);"
+                        th:object="${talk}">
+                        <div class="form-group" style="display:inline-block;">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><label for="name"
+                                            class="col-sm-2 col-form-label">Buscar:</label></td>
+                                        <td><input type="text" class="form-control"
+                                            autocomplete="off" th:field="*{roomName}" id="name"
+                                            placeholder="Nombre" required="required"
+                                            ></input></td>
+                                        <td><button type="submit" class="btn btn-danger">
+                                                <i class="iconf fa fa-search" style="color: white;"></i>
+                                            </button></td>
+                                  
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                        
+                    </form>
+                    
+                     
+                        </div>
+                            <table>
+                                <thead>
+                                    <tr class="table100-head" style="background-color: #408791;">
+                                        <th class="tabletext" style="text-align: center; font-family: 'Oswald', sans-serif;">ID</th>
+                                        <th class="tabletext"style="text-align: center;font-family: 'Oswald', sans-serif;">Sala</th>
+                                        <th class="tabletext"style="text-align: center;font-family: 'Oswald', sans-serif;">Capacidad</th>
+                                        <th class="tabletext"style="text-align: center;font-family: 'Oswald', sans-serif; ">Vacantes</th>
+                                         <th class="tabletext"style="text-align: center;font-family: 'Oswald', sans-serif; ">Enlace</th>
+                                        <th class="tabletext"style="text-align: center;font-family: 'Oswald', sans-serif; ">Operacion</th>
+                                        <th class="tabletext"style="text-align: center;font-family: 'Oswald', sans-serif; ">Operacion</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr th:each="c: ${listTalk}">
+                                            <td class="" style="text-align: center;" th:text="${c.idTalk}"></td>
+                                            <td class="" style="text-align: center;" th:text="${c.roomName}"></td>
+                                            <td class="" style="text-align: center;" th:text="${c.capacity}"></td>
+                                            <td class="" style="text-align: center;" th:text="${c.vacancies}"></td>
+                                            <td class="" style="text-align: center;"><a target="_blank" th:href="${c.enlace}">Ingresar</a></td>
+                                            <td style="text-align: center;"> <a th:href="@{'/talks/delete/'+${c.idTalk}}"><i
+                                        class="iconf fa fa-trash" style="color: red"></i></a> </td>
+                                            <td style="text-align: center;"><a th:href="@{'/talks/modificar/' + ${c.idTalk}}">Modificar</a></td>
+                                        </tr>
+                                                                
+                                                                                                                                                                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            
+                
+           
+           
+         </section>
+    
+    
+     
+     
+     
+   
+</body>
+</html>
+
+<!-- <div class="input">
+    <input type="text" placeholder="buscar aquí">
+    <label for="#" class="fas fa-search"></label>
+</div> -->
+

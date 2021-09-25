@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+}
+
+.container, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    animation: rotar 1.5s linear  infinite;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+svg .uno, svg .dos {
+    
+    fill: none;
+    stroke-width: 12px;
+    stroke-linecap: round;  
+
+}
+
+
+svg .dos {
+
+    stroke: url(#uno);
+    stroke-dasharray:  400;
+    stroke-dashoffset: 400;
+    animation: anim 4s linear infinite;
+
+}
+
+svg .uno{
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    stroke: #eee;
+}
+
+@keyframes anim {
+    100%,0%{
+        stroke-dashoffset: 760;
+    }
+    70% {
+        stroke-dashoffset: 60;
+    }
+}
+
+@keyframes rotar{
+    from {
+        transform: rotate (0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
